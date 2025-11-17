@@ -573,17 +573,6 @@ line-height: normal;
   line-height: 1.6;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-
-.scroll-section:has(.fade-in:is(:in-view)) .fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 </style>
 
@@ -615,8 +604,8 @@ line-height: normal;
  </div>
 </section>
 
-<section class="scroll-section">
-	<div class="saffron fade-in">
+<section>
+	<div class="saffron">
 		<h2>
 		<span class="font-aboreto2"> SAFFRON </span>
 		<div>
