@@ -573,6 +573,18 @@ line-height: normal;
   line-height: 1.6;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.scroll-section:has(.fade-in:is(:in-view)) .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 </style>
 
 <title>The Red Thread of The World</title>
@@ -603,9 +615,9 @@ line-height: normal;
  </div>
 </section>
 
-<section>
+<section class="scroll section">
 	<div class="saffron">
-		<h2>
+		<h2 class="fade-in">
 		<span class="font-aboreto2"> SAFFRON </span>
 		<div>
 		<p class="font-times2">
