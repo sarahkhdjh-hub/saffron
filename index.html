@@ -572,7 +572,33 @@ line-height: normal;
   font-size: clamp(24px, 1.2vw, 28px);
   line-height: 1.6;
 }
+@keyframes rotateFade {
+  0% { transform: rotate(0deg); opacity: 0; }
+  25% { transform: rotate(90deg); opacity: 1; }
+  75% { transform: rotate(270deg); opacity: 1; }
+  100% { transform: rotate(360deg); opacity: 0; }
+}
 
+/* Apply to your scattered images */
+.scattered-img, .scattered-img2 {
+    position: absolute;
+    width: 200px;       /* adjust for .scattered-img2 if needed */
+    height: auto;
+    animation: rotateFade 6s infinite ease-in-out; /* 6s loop */
+}
+
+/* Different sizes */
+.scattered-img { width: 200px; }
+.scattered-img2 { width: 100px; }
+
+/* Staggered fade-in */
+.scattered-img:nth-child(1) { animation-delay: 0s, 0s; top: 10%; left: 1%; }
+.scattered-img2:nth-child(2) { animation-delay: 0.5s, 0s; top: 30%; left: 30%; }
+.scattered-img:nth-child(3) { animation-delay: 1s, 0s; top: 30%; left: 70%; }
+.scattered-img2:nth-child(4) { animation-delay: 1.5s, 0s; top: 80%; left: 70%; }
+.scattered-img:nth-child(5) { animation-delay: 2s, 0s; top: 60%; left: 85%; }
+.scattered-img2:nth-child(6) { animation-delay: 2.5s, 0s; top: 50%; left: 50%; }
+.scattered-img:nth-child(7) { animation-delay: 3s, 0s; top: 80%; left: 20%; }
 </style>
 
 <title>The Red Thread of The World</title>
@@ -645,14 +671,14 @@ line-height: normal;
 
 <section>
   <div class="scattered-container">
-    <img src="buds.png" class="scattered-img" style="top: 10%; left: 1%; transform: rotate(10deg);">
-    <img src="buds.png" class="scattered-img2" style="top: 30%; left: 30%; transform: rotate(50deg);">
-    <img src="buds.png" class="scattered-img" style="top: 30%; left: 70%; transform: rotate(-25deg);">
-    <img src="buds.png" class="scattered-img2" style="top: 80%; left: 70%; transform: rotate(80deg);">
-    <img src="buds.png" class="scattered-img" style="top: 60%; left: 85%; transform: rotate(50deg);">
-    <img src="buds.png" class="scattered-img2" style="top: 50%; left: 50%; transform: rotate(180deg);">
-    <img src="buds.png" class="scattered-img" style="top: 80%; left: 20%; transform: rotate(-10deg);">
-   </div>
+    <img src="buds.png" class="scattered-img">
+    <img src="buds.png" class="scattered-img2">
+    <img src="buds.png" class="scattered-img">
+    <img src="buds.png" class="scattered-img2">
+    <img src="buds.png" class="scattered-img">
+    <img src="buds.png" class="scattered-img2">
+    <img src="buds.png" class="scattered-img">
+  </div>
 </section>
 
 <section>
