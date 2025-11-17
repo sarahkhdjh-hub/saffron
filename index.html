@@ -572,25 +572,6 @@ line-height: normal;
   font-size: clamp(24px, 1.2vw, 28px);
   line-height: 1.6;
 }
-/* Initial state */
-.scroll-section .fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* When the section is in view */
-.scroll-section:has(.fade-in:in-view) .fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Fallback for modern browsers without :has() */
-.fade-in.scroll-in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 </style>
 
@@ -622,8 +603,8 @@ line-height: normal;
  </div>
 </section>
 
-<section class="scroll-section">
-	<div class="saffron fade-in">
+<section>
+	<div class="saffron">
 		<h2>
 		<span class="font-aboreto2"> SAFFRON </span>
 		<div>
@@ -636,10 +617,10 @@ line-height: normal;
 	</div>
 </section>
 
-<section class="origin-section scroll-section">
+<section class="origin-section">
   <h2 class="origin-title">Origin</h2>
 
-  <div class="origin-hero fade-in">
+  <div class="origin-hero">
     <img src="crocus2.png" alt="Crocus">
     <div class="origin-text-overlay">
       <p class="origin-text">
