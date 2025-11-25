@@ -1,783 +1,183 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Beau+Rivage&display=swap');
-
-.font-aboreto {
-    font-family: 'Aboreto', cursive;
-    font-size: 100px;
-    font-weight: 400;
-    line-height: 1.2;
-}
-
-.font-aboreto2 {
-	color: #FFF7EF;
-	text-align: center;
-	font-family: Aboreto;
-	font-size: 200px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-}
-
-.font-aboreto3 {
-	color: #A11B0A;
-text-align: center;
-font-family: Aboreto;
-font-size: 150px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-
-.font-beaurivage2 {
-	color: #FFF7EF;
-	font-family: "Beau Rivage";
-	font-size: 250px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-}
-.font-beaurivage {
-    font-family: 'Beau Rivage', cursive;
-    color: #A11B0A;
-    font-size: 200px;
-    font-weight: 400;
-    line-height: 1.2;
-}
-
-.font-times {
-	color: #A11B0A;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: normal;
-    font-style: normal;
-}
-
-.font-times2 {
-	color: #FFF7EF;
-text-align: center;
-font-family: "Times New Roman";
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-
-body {
-    background-image: url(paper.png);
-    margin: 0;
-    font-family: "Times New Roman", serif;
-
-}
-
-
-html, body {
-	margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* prevent horizontal scroll by default */
-    width: 100%;
-}
-
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-    color: #A11B0A;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: #A11B0A;
-    font-family: "Aboreto", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    border-bottom: 2px solid #A11B0A;
-}
-
-.navbar a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #A11B0A;
-    font-family: "Aboreto", sans-serif;
-    font-size: 24px;
-}
-
-.title-container {
-    width: 100%;        
-    display: flex;
-    align-items: auto;    
-    padding-left: 50px;
-    flex-wrap: nowrap;
-    gap: 60px;
-
-}
-
-.title-img {
-    width: 100%;  
-    max-width: 700px;
-    height: auto;
-}
-
-
-.saffron {
-    background-image: linear-gradient(180deg, #812013 33.27%, #913B2F 42.83%, #A0564A 52.38%, #B07166 59.71%, #C08B81 67.35%, #FFF7EF 91.87%);
-	display: flex;              
-  justify-content: center; 
-  align-items: center;                      
-  text-align: center;
-  height: 800px;       /* full viewport height */
-    min-height: 600px;   /* ensures it’s not too small on smaller screens */
-    width: 100%;
-}
-
-/* Add / replace these rules in your stylesheet */
-.origin-section {
-  padding: 10px 6%;
-  box-sizing: border-box;
-}
-
-.origin-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.origin-title {
-  font-family: 'Beau Rivage', cursive;
-  color: #A11B0A;
-  font-size: 350px; 
-  line-height: normal;
-  font-weight: normal;
-  padding-left: 100px;
-  margin-bottom: 10px;
-}
-
-
-.origin-hero {
-  position: relative;
-  width: 100%;
-  height: 300vh;         
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.origin-hero img {
-  width: 1000px;              
-  height: 150%;
-  object-fit: cover;
-  position: relative;
-  top: -800px;
-  right: 70px;            
-}
-
-.origin-text-overlay {
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  max-width: 400px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.origin-text-center {
-  text-align: left;
-  max-width: 820px;
-  margin-top: -140px;
-}
-
-.origin-text {
-  font-family: "Times New Roman", serif;
-  font-size: 32px;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.origin-center {
-  font-family: "Times New Roman", serif;
-  font-size: 32px;
-  line-height: 1.7;
-  margin-top: 400px;
-  margin-left: -200px;
-}
-
-
-
-.didyouknow {
-  font-family: 'Aboreto', cursive;
-  font-size: 86px;
-  color: #A11B0A;
-  margin-top: 200px;
-  margin-left: -50px;
-}
-
-.didyouknow-text {
-  font-family: "Times New Roman", serif;
-  font-size: clamp(32px, 1.2vw, 20px);
-  max-width: 780px;
-  line-height: 1.6;
-  margin-left: -50px;
-}
-
-.scattered-container {
-    position: relative;  /* positions are relative to this container */
-    width: 100%;
-    height: 70vh;       /* adjust to the area you want to cover */
-    pointer-events: none; /* won’t block clicks */
-}
-
-.scattered-img {
-    position: absolute;
-    width: 200px;       /* size of the small images */
-    height: auto;
-    opacity: 1;
-}
-
-.scattered-img2 {
-    position: absolute;
-    width: 100px;       /* size of the small images */
-    height: auto;
-    opacity: 1;
-}
-
-.usage-container {
-  position: relative;
-  width: 100%;
-  height: 150vh;         
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.usage-container-image {
-	width: 900px;              
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  left: 600px;
-  bottom: 50px;
-}
-
-
-.usage-text-overlay {
-    position: absolute; /* allows text to sit on top */
-    top: 20%;           /* adjust vertical position */
-    left: 35%;          /* adjust horizontal position */
-    color: #A11B0A;
-    padding: 20px;
-    max-width: 400px;
-    color: #A11B0A;
-text-align: center;
-font-family: Aboreto;
-font-size: 150px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-
-.usage-text-overlay2 {
-   color: #A11B0A;
-   text-align: center;
-   font-family: "Beau Rivage";
-   font-size: 230px;
-   font-style: normal;
-   font-weight: 400;
-   line-height: normal;
-   position: absolute; /* allows text to sit on top */
-    top: 23%;           /* adjust vertical position */
-    right: 60%;          /* adjust horizontal position */
-    padding: 20px;
-    max-width: 400px;
-}
-
-.usage-text-overlay4 {
-    position: absolute; /* allows text to sit on top */
-    top: 50%;           /* adjust vertical position */
-    right: 60%;          /* adjust horizontal position */
-    color: #A11B0A;
-    padding: 20px;
-    max-width: 400px;
-    color: #A11B0A;
-   text-align: center;
-   font-family: Aboreto;
-   font-size: 150px;
-   font-style: normal;
-   font-weight: 400;
-   line-height: normal;
-}
-
-.usage-hero {
-  position: relative;
-  width: 100%;
-  height: 250vh;         
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.usage-hero img {
-  width: 900px;              
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  top: -50px;
-  right: 100px;            
-}
-
-.usage-text-overlay3 {
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  max-width: 400px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-
-.usage-text3 {
-  font-family: "Times New Roman", serif;
-  font-size: 32px;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.usage-center3 {
-  font-family: "Times New Roman", serif;
-  font-size: 32px;
-  line-height: 1.7;
-  margin-top: 600px;
-  margin-left: -200px;
-}
-
-.usage-container2 {
-  position: relative;
-  width: 100%;
-  height: 150vh;         
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.usage-container-image2 {
-  width: 100%;              
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  left: 600px;
-}
-
-.usage-text-overlay5 {
-  position: absolute;
-  top: 20%;
-  right: 60%;
-  max-width: 450px;
-  padding: 20px;
-}
-
-.usage-text5 {
-	font-family: "Times New Roman", serif;
-  font-size: 32px;
-  line-height: 1.7;
-  margin-right: 20px;
-
-}
-
-.petal-container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  height: auto;         
-  overflow: visible;
-}
-
-.petal-container-image {
-  width: 100%;              
-  height: auto;
-  position: relative;
-  transform: translateX(-100px);
-  top: 200px;
-}
-
-.petal-text-overlay {
-  position: absolute;
-  top: 20%;
-  left: 60%;
-  max-width: 500px;
-  padding: 20px;
-}
-
-.petal-text {
-  font-family: "Times New Roman", serif;
-  font-size: 32px;
-  line-height: 1.7;
-  margin-right: 20px;
-
-}
-
-.benefits-container{
-	background-image: linear-gradient(180deg, #812013 33.27%, #913B2F 42.83%, #A0564A 52.38%, #B07166 59.71%, #C08B81 67.35%, #FFF7EF 91.87%);
-  position: relative; /* allows absolute positioning inside */
-  width: 100%;
-  height: auto;
-}
-
-.benefits-title {
-color: #FFF7EF;
-font-family: "Beau Rivage";
-font-size: 350px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-  position: relative;
-  z-index: 1;
-  left: 10%; 
-}
-
-.benefits-image {
-  position: absolute;
-  top: 250px;   /* adjust so it overlaps title */
-  left: 0;
-  width: 1000px; /* or set a fixed width */
-  z-index: 2; /* behind the title */
-}
-
-.benefits-text-overlay {
-  position: relative;
-  top: -300px;
-  left: 50%;
-  max-width: 550px;
-  padding: 20px;
-}
-
-.benefits-text {
- font-family: "Times New Roman", serif;
- color: #FFF7EF ;
-  font-size: 32px;
-  line-height: 1.7;
-  margin-right: 20px;
-}
-
-.benefits-text-overlay2 {
-  position: absolute;
-  top: 1000px;
-  right: 40%;
-  max-width: 700px;
-  padding: 20px;
-}
-
-.benefits-text2 {
- font-family: "Times New Roman", serif;
-  font-size: 32px;
-  line-height: 1.7;
-  margin-right: 50px;
-}
-
-.didyouknow2-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 80px;                    
-  padding-top: 400px;
-  padding-left: 100px;
-  flex-wrap: nowrap;              
-}
-
-.didyouknow2-text {
-  flex: 1;                        
-  min-width: 300px;              
-  font-family: "Times New Roman", serif;
-  font-size: clamp(32px, 1.2vw, 32px);
-  line-height: 1.6;
-}
-
-.didyouknow2-title {
-  font-family: 'Aboreto', cursive;
-  font-size: clamp(50px, 6vw, 86px);
-  color: #A11B0A;
-  margin-bottom: 20px;
-}
-
-.didyouknow2-image-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;        
-  align-items: flex-start;
-}
-
-.didyouknow2-image {
-  max-width: 1000px;               /* adjust size */
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.final {
-	color: #A11B0A;
-    text-align: center;
-    font-family: "Times New Roman";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-top: 400px;
-    padding-bottom: 400px;
-    padding-left: 200px;
-    padding-right: 200px;
-}
-
-.stacked-images-section {
-  width: 100%;
-  height: 600px;          /* adjust height */
-  position: relative;
-  overflow: visible;
-}
-
-.stacked-images-container {
-  position: relative;     /* relative positioning for images & text */
-  width: 100%;
-  height: 100%;
-}
-
-/* Stacked images */
-.stacked-image {
-  position: absolute;
-  width: 100%;           /* adjust size */
-  height: auto;
-  object-fit: cover;
-}
-
-/* Adjust positions and stacking order */
-.img1 { top: 0; left: 50px; z-index: 1; }
-.img2 { top: 2000px; left: 1px; z-index: 2; }
-
-/* Text on top of images */
-.stacked-text {
-  position: absolute;
-  top: 2300px;               /* adjust vertical placement */
-  left: 50%;              /* center horizontally */
-  transform: translateX(-50%);
-  z-index: 10;            /* above all images */
-  color: #FFF7EF;
-  text-align: center;
-  max-width: 800px;       /* optional */
-}
-
-
-.stacked-text p {
-  font-family: 'Times New Roman', serif;
-  font-size: clamp(24px, 1.2vw, 28px);
-  line-height: 1.6;
-}
-@keyframes rotateFade {
-  0% { transform: rotate(0deg); opacity: 0; }
-  25% { transform: rotate(90deg); opacity: 1; }
-  75% { transform: rotate(270deg); opacity: 1; }
-  100% { transform: rotate(360deg); opacity: 0; }
-}
-
-/* Apply to your scattered images */
-.scattered-img, .scattered-img2 {
-    position: absolute;
-    width: 200px;       /* adjust for .scattered-img2 if needed */
-    height: auto;
-    animation: rotateFade 6s infinite ease-in-out; /* 6s loop */
-}
-
-/* Different sizes */
-.scattered-img { width: 200px; }
-.scattered-img2 { width: 100px; }
-
-/* Staggered fade-in */
-.scattered-img:nth-child(1) { animation-delay: 0s, 0s; top: 10%; left: 1%; }
-.scattered-img2:nth-child(2) { animation-delay: 0.5s, 0s; top: 30%; left: 30%; }
-.scattered-img:nth-child(3) { animation-delay: 1s, 0s; top: 30%; left: 70%; }
-.scattered-img2:nth-child(4) { animation-delay: 1.5s, 0s; top: 80%; left: 70%; }
-.scattered-img:nth-child(5) { animation-delay: 2s, 0s; top: 60%; left: 85%; }
-.scattered-img2:nth-child(6) { animation-delay: 2.5s, 0s; top: 50%; left: 50%; }
-.scattered-img:nth-child(7) { animation-delay: 3s, 0s; top: 80%; left: 20%; }
-</style>
-
-<title>The Red Thread of The World</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Beau+Rivage&display=swap');
+
+		body {background-image: url(paper.png);
+			margin: 0; 
+			font-family: "Times New Roman", Times, serif;
+		}
+
+		html, body {
+			margin: 0;
+		    padding: 0;
+		    overflow-x: hidden; 
+		    width: 100%;
+		}
+
+		img {width: 100%}
+
+		.header {
+			display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    padding: 25px;
+		    color: #A11B0A;
+		    font-family: "Aboreto", sans-serif;
+		    font-size: 24px;
+		    font-weight: 400;
+		    border-bottom: 2px solid #A11B0A;
+		}
+
+		.header a {
+		    margin-left: 20px;
+		    text-decoration: none;
+		    color: #A11B0A;
+		    font-family: "Aboreto", sans-serif;
+		    font-size: 24px;
+		}
+
+		.title {
+			width: 100%;        
+		    display: flex;
+		    align-items: auto;    
+		    padding-left: 50px;
+		    gap: 60px;  
+		}
+
+		.title img {
+			height: auto;
+			position: absolute;
+			max-width: 1000px;
+			top: 30px;
+			left: 600px;
+		}
+
+		.aboreto {
+			font-family: "Aboreto", sans-serif;
+		    font-size: 96px;
+		    font-weight: 400;
+		}
+
+		.aboreto-saffron {
+			font-family: "Aboreto", sans-serif;
+		    font-size: 200px;
+		    font-weight: 400;
+		    color:#FFF7EF ;
+		    margin: auto;
+		}
+
+		.aboreto-saffron-s {
+			font-family: "Aboreto", sans-serif;
+		    font-size: 200px;
+		    font-weight: 400;
+		    color:#FFF7EF ;
+		}
+
+		.beaurivage {
+		    font-family: 'Beau Rivage', cursive;
+		    color: #A11B0A;
+		    font-size: 200px;
+		    font-weight: 400;
+		}
+
+		.beaurivage2 {
+		    font-family: 'Beau Rivage', cursive;
+		    color: #FFF7EF;
+		    font-size: 250px;
+		    font-weight: 400;
+		}
+
+	    .times {
+			color: #A11B0A;
+			font-family: "Times New Roman", Times, serif;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		.times2 {
+			color: #FFF7EF;
+			text-align: center;
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		.presaffron {
+			background: linear-gradient(180deg, #FFF7EF 33.27%, #C08B81 42.83%,  #B07166 52.38%, #A0564A 59.71%, #913B2F 67.35%, #812013 91.87%);
+			display: block;
+			padding-block: 50px;          
+		    justify-content: center; 
+		    align-items: center;                      
+		    text-align: center;
+		    height: 1000px;     
+		    width: 100%;
+		    margin: 0;
+		}
+
+		.saffron {
+			background: linear-gradient(180deg, #812013 33.27%, #913B2F 42.83%, #A0564A 52.38%, #B07166 59.71%, #C08B81 67.35%, #FFF7EF 91.87%);;
+			display: block;
+			padding-block: 50px;          
+		    justify-content: center; 
+		    align-items: center;                      
+		    text-align: center;
+		    height: 1000px;     
+		    width: 100%;
+		    
+		    margin: 0;
+		}
+
+
+	</style>
+	<title>The Red Thread of The World</title>
 </head>
-
 <body>
-	
-<header class="navbar">
-    Know Your Spice
-    <nav>
-        <a href="#">ORIGIN</a>
-        <a href="#">USAGE</a>
-        <a href="#">BENEFITS</a>
-    </nav>
-</header>
+	<header class="header">
+    		Know Your Spice
+	    <nav>
+	        <a href="#">ORIGIN</a>
+	        <a href="#">USAGE</a>
+	        <a href="#">BENEFITS</a>
+	    </nav>
+	</header>
 
-<section>
-   <div class="title-container">
-      <h2>
-       <span class="font-aboreto">The</span>
-       <span class="font-beaurivage">Red</span> <br>
-       <span class="font-aboreto">Thread of The World</span>
-       <p class="font-times">Ever wonder how the thinnest <br> strands could be so expensive?</p>
-      </h2>
-   
-   <img class="title-img" src="crocusdrawing1.svg" 
-     alt="Crocus drawing">
- </div>
-</section>
+	<section>
+		<div class="title">
+			<h2><span class="aboreto">The</span>
+				<span class="beaurivage">Red</span>
+				<span class="aboreto"><br>Thread Of <br>the world</span>
+				<p class="times">Ever wonder how the thinnest <br> strands could be so expensive?</p>
+			</h2>
+			<img class="title-img" src="crocusdrawing1.svg">
+		</div>
+	</section>
 
-<section>
-	<div class="saffron">
-		<h2>
-		<span class="font-aboreto2"> SAFFRON </span>
-		<div>
-		<p class="font-times2">
-		Saffron is the world’s most precious spice. <br> For thousands of years, its red threads have connected <br> cultures through flavor, color, and trade. 
-	    </p>
-	    
-	    </div>
-		</h2>
-	</div>
-</section>
+	<section>
+		<div class="presaffron">
+			<p class="times2">follow</p>
+		</div>
+		
+	</section>
 
-<section class="origin-section">
-  <h2 class="origin-title">Origin</h2>
 
-  <div class="origin-hero">
-    <img src="crocus2.png" alt="Crocus">
-    <div class="origin-text-overlay">
-      <p class="origin-text">
-        Saffron comes from the stigma of a small purple crocus flower, known as
-        <em><strong>Crocus sativus</strong></em>. It is harvested from the crocus flower, which
-        blooms for only a few weeks each year.
-      </p>
-       <p class="origin-center">
-       The crocus originated in ancient Persia (modern-day Iran) and later
-       spread across Asia and Europe through trade and cultivation.
-      </p>
-      <div>
-        <h3 class="didyouknow">DID YOU KNOW?</h3>
-          <p class="didyouknow-text">
-             Each flower produces just three tiny red threads, which are carefully handpicked and dried. It takes around <em><strong>150,000 flowers</strong></em> to produce just <em><strong>one kilogram</strong></em> of saffron, making it one of 
-             the most valuable substances on earth.
-          </p>
-       </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="scattered-container">
-    <img src="buds.png" class="scattered-img">
-    <img src="buds.png" class="scattered-img2">
-    <img src="buds.png" class="scattered-img">
-    <img src="buds.png" class="scattered-img2">
-    <img src="buds.png" class="scattered-img">
-    <img src="buds.png" class="scattered-img2">
-    <img src="buds.png" class="scattered-img">
-  </div>
-</section>
-
-<section>
-	<div class="usage-container">
-      <img src="worldmap2.png" alt="map" class="usage-container-image">
-         <div>
-           <h2 class="usage-text-overlay">Journey</h2>
-           <h2 class="usage-text-overlay2">Across</h2>
-           <h2 class="usage-text-overlay4">Continents</h2>
-
-    </div>
-    </div>
-
-    <div class="usage-hero">
-     <img src="worldmap1.png" class="usage-hero">
-    <div class="usage-text-overlay3">
-      <p class="usage-text3">
-        For over 3,000 years, saffron has traveled along historic trade routes, linking civilizations from <em><strong>Persia and India</strong></em> to <em> <strong>Greece, Spain, and beyond.</strong></em> It was prized not only as a spice but also as a 
-        <em><strong>medicine, dye, and perfume.</strong></em>
-      </p>
-       <p class="usage-center3">
-       In <em><strong>Persia,</strong></em> saffron symbolized joy and was used in perfumes and celebrations.
-      </p>
-      
-    </div>
-  </div>
-</section>
-
-    <div class="usage-container">
-    	<img src="paella.png" class="usage-container-image2">
-    	<div class="usage-text-overlay5">
-    		<p class="usage-text5">
-    			In <em><strong>Spain,</strong></em> it gave the golden color and aroma to paella, one of the country’s most famous foods.
-    		</p>
-    	</div>
-    </div>
-   
-   <div class="petal-container">
-   	<img src="petal.svg" class="petal-container-image">
-   	<div class="petal-text-overlay">
-   		<p class="petal-text">
-   			In <em><strong>India,</strong></em> it became a sacred color of purity and appears in religious rituals and traditional dishes.
-   		</p>
-   	</div> 
-   </div>
-
-   <section>
-   	 <div class="benefits-container">
-       <h2 class="benefits-title">Benefits</h1>
-         <img src="saffronjar.svg" class="benefits-image">
-           <div class="benefits-text-overlay">
-     	     <p class="benefits-text">Beyond its beauty and flavor, saffron offers many natural benefits. <br> It has been used in traditional medicine for centuries and continues to be studied for its health-promoting properties.</p>
-           </div>
-            <div class="benefits-text-overlay2">
-    		<p class="benefits-text2">
-    			Taking saffron by mouth might improve some symptoms of <em><strong>Alzheimer disease</strong></em> by a small amount and improve symptoms of <em><strong>depression.</strong></em>
-    		</p>
-    	</div>
-     </div>
-  </section>
-
-  <section>
-  <div class="didyouknow2-layout">
-    <div class="didyouknow2-text">
-      <h3 class="didyouknow2-title">DID YOU KNOW?</h3>
-      <p>
-        When saffron is steeped in water, it releases a deep golden hue. This color has long symbolized <em><strong>warmth, light, and life.</strong></em>
-      </p>
-      <p>
-        The pigment, called <em><strong>crocetin,</strong></em> was once used to dye fabrics and manuscripts. Its strong aroma and taste — <em><strong>slightly earthy, floral, and sweet</strong></em> — make it a key ingredient in both cuisine and culture.
-      </p>
-    </div>
-
-    <div class="didyouknow2-image-wrapper">
-      <img src="golden1.svg" class="didyouknow2-image" alt="Golden Saffron">
-    </div>
-  </div>
-</section>
-
-<section>
-	<p class="final">
-		From a single flower comes a thread that has colored the world for centuries. <br> Saffron continues to link past and present — through food, culture, and tradition. <br> It is truly the red thread of the world.
-	</p>
-</section>
-
-<section class="stacked-images-section">
-  <div class="stacked-images-container">
-    <!-- Stacked images -->
-    <img src="crocusfinal.png" class="stacked-image img1" alt="Image 1">
-    <img src="footer.svg" class="stacked-image img2" alt="Image 2">
-
-    <!-- Text on top of images -->
-    <div class="stacked-text">
-      <p>
-        The Red Thread of The World. © 2025 Sarah. All rights reserved.
-      </p>
-    </div>
-  </div>
-</section>
-
+	<section>
+		<div class="saffron">
+			<h2> 
+				<span class="aboreto-saffron-s">S</span>
+				<span class="beaurivage2">A</span>
+				<span class="aboreto-saffron">FFRON</span>
+			</h2>
+			<p class="times2"> Saffron is the world’s most precious spice. <br>For thousands of years, its red threads have connected <br> cultures through flavor, color, and trade. </p>
+		</div>
+	</section>
 </body>
 </html>
