@@ -54,7 +54,7 @@
 			position: absolute;
 			max-width: 1000px;
 			top: 30px;
-			left: 500px;
+			right: 0;
 		}
 
 		.aboreto {
@@ -83,7 +83,7 @@
 
 
 		.presaffron {
-			background: linear-gradient(180deg, #FFF7EF 30.27%, #C08B81 42.83%,  #B07166 52.38%, #A0564A 59.71%, #913B2F 67.35%, #812013 91.87%);
+			background: linear-gradient(180deg, #FFF7EF 9.27%, #C08B81 42.83%,  #B07166 52.38%, #A0564A 59.71%, #913B2F 67.35%, #812013 91.87%);
 			display: block;
 			padding-block: 50px;          
 		    justify-content: center; 
@@ -154,10 +154,23 @@
 		    font-weight: 400;
 		    position: absolute;
 		    left: 300px;
-		    top: 2800px;
+		    top: 2469px;
 		}
 
 		.origin-text {
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 3250px;
+			right: 200px;
+			max-width: 600px;
+			padding: 20px;
+		}
+
+		.origin-text2 {
 			font-family: "Times New Roman";
 			font-size: 32px;
 			font-style: normal;
@@ -170,34 +183,436 @@
 			padding: 20px;
 		}
 
-		.origin-text2 {
+		.origin img {
+			position: absolute;
+			right: 500px;
+			height: 3000px;
+			object-fit: cover;
+			top: 2300px;
+			transform: scaleX(-1);
+		}
+
+		.origin-buds {
+		  --rot: 324deg;
+		  position: absolute;
+		  left: 1100px;
+		  top: 2600px;
+		  width: 700px;
+		  height: auto;
+		  animation: float-turn 3s ease-in-out infinite;
+		}
+
+		@keyframes float-turn {
+		  0%   { transform: rotate(var(--rot)) translateY(0); }
+		  50%  { transform: rotate(var(--rot)) translateY(-15px); }
+		  100% { transform: rotate(var(--rot)) translateY(0); }
+		}
+
+		.origin-buds2 {
+			position: absolute;
+			--rot: 320deg;
+			--flip: -1;
+			transform: rotate(var(--rot)) scaleX(var(--flip));
+			width: 500px;
+			height: auto;
+			left: 1150px;
+			top: 3400px;
+			animation: floatbuds2 3s ease-in-out infinite;;
+		}
+
+		@keyframes floatbuds2 {
+		  0% {
+		    transform: rotate(var(--rot)) scaleX(var(--flip)) translateY(0);
+		  }
+		  50% {
+		    transform: rotate(var(--rot)) scaleX(var(--flip)) translateY(-15px);
+		  }
+		  100% {
+		    transform: rotate(var(--rot)) scaleX(var(--flip)) translateY(0);
+		  }
+		}
+
+		.origin-buds3 {
+			  --rot: 21.73deg;
+		  position: absolute;
+		  left: 1200px;
+		  top: 3650px;
+		  width: 300px;
+		  height: auto;
+		  animation: float-turn 3s ease-in-out infinite;
+		}
+
+		.didyouknow {
+			color: #A11B0A;
+			font-family: Aboreto;
+			font-size: 86px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 4149px;
+			right: 280px;
+		}
+
+		.didyouknow-text {
 			font-family: "Times New Roman";
 			font-size: 32px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: normal;
 			position: absolute;
-			top: 4400px;
-			right: 200px;
-			max-width: 600px;
+			top: 4326px;
+			right: 378px;
 			padding: 20px;
 		}
 
-		.origin img {
-			position: absolute;
-			right: 500px;
-			height: 3000px;
-			object-fit: cover;
-			top: 2600px;
+
+		.scattered-container {
+		    position: absolute;
+		    width: 100%;
+		    height: 70vh;
+		    top: 4600px;       
+		    pointer-events: none; 
 		}
 
-		.origin-buds {
+		.scattered-img {
+		    position: absolute;
+		    width: 400px;       
+		    height: auto;
+		    opacity: 1;
+		}
+
+		.scattered-img2 {
+		    position: absolute;
+		    width: 200px;       
+		    height: auto;
+		    opacity: 1;
+		}
+
+		@keyframes rotateFade {
+		  0% { transform: rotate(0deg); opacity: 0; }
+		  25% { transform: rotate(90deg); opacity: 1; }
+		  75% { transform: rotate(270deg); opacity: 1; }
+		  100% { transform: rotate(360deg); opacity: 0; }
+		}
+
+
+		.scattered-img, .scattered-img2 {
+		    position: absolute;
+		    width: 200px;       
+		    height: auto;
+		    animation: rotateFade 6s infinite ease-in-out; 
+		}
+
+
+		.scattered-img { width: 400px; }
+		.scattered-img2 { width: 200px; }
+
+
+		.scattered-img:nth-child(1) { animation-delay: 0s, 0s; top: 10%; left: 1%; }
+		.scattered-img2:nth-child(2) { animation-delay: 0.5s, 0s; top: 30%; left: 30%; }
+		.scattered-img:nth-child(3) { animation-delay: 1s, 0s; top: 30%; left: 70%; }
+		.scattered-img2:nth-child(4) { animation-delay: 1.5s, 0s; top: 80%; left: 70%; }
+		.scattered-img:nth-child(5) { animation-delay: 2s, 0s; top: 60%; left: 85%; }
+		.scattered-img2:nth-child(6) { animation-delay: 2.5s, 0s; top: 50%; left: 50%; }
+		.scattered-img:nth-child(7) { animation-delay: 3s, 0s; top: 80%; left: 20%; }
+
+		.usage {
+			width: 100%;
+			height: 2300px;
+			display: flex;
+			align-items: auto;
+			padding: 50px;
+		}
+
+		.usage-title {
+			z-index: 2;
+		}
+
+		.usage-journey {
+			color: #A11B0A;
+			text-align: center;
+			font-family: Aboreto;
+			font-size: 150px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			right: 250px;
+			top: 5500px;
+		}
+
+		.usage-across {
+			color: #A11B0A;
+			text-align: center;
+			font-family: "Beau Rivage";
+			font-size: 230px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			right: 700px;
+			top: 5600px;
+		}
+
+		.usage-con {
+			color: #A11B0A;
+			text-align: center;
+			font-family: Aboreto;
+			font-size: 150px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 5850px;
+			right: 200px;
+		}
+		.usage-img1 {
+			position: absolute;
+			max-width: 800px;
+			right: 0;
+			top: 5100px;
+			z-index: 1;
+		}
+
+		.usage-img2 {
+			position: absolute;
+			max-width: 800px;
+			left: 0;
+			top: 5900px;
+			z-index: 1;
+		}
+
+		.usage-text {
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 6300px;
+			right: 200px;
+		}
+
+		.persia {
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 6800px;
+			right: 200px;
+		}
+
+		.paella {
+			position: absolute;
+			top: 7000px;
+			left: 500px;
+		}
+
+		.spain {
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 7400px;
+			left: 100px;
+		}
+
+		.india {
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 8000px;
+			right: 100px;
+		}
+
+		.petal {
+			position: absolute;
+			top: 7800px;
+			max-width: 800px;
+			left: 20px;
+		}
+
+		.prebenefits {
+			background: linear-gradient(180deg, #FFF7EF 9.27%, #C08B81 42.83%,  #B07166 52.38%, #A0564A 59.71%, #913B2F 67.35%, #812013 91.87%);
+			display: flex;       
+		    height: 1000px;     
+		    width: 100%;
+		    margin: 0;
+		}
+
+		.benefits {
+			background: linear-gradient(180deg, #812013 27.27%, #913B2F 42.83%, #A0564A 52.38%, #B07166 59.71%, #C08B81 67.35%, #FFF7EF 97.87%);;
+			display: flex;
+		    height: 700px;     
+		    width: 100%;
+		    margin: 0;
+		}
+
+		.benefits-title {
+			color: #FFF7EF;
+			font-family: "Beau Rivage";
+			font-size: 350px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 8400px;
+			left: 150px;
+			z-index: 1;
+		}
+
+		.benefits-img1 {
+			position: absolute;
+			z-index: 2;
+			width: 1000px;
+			top: 8900px;
+		}
+
+		.benefits-text1 {
+			color: #FFF7EF;
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			line-height: normal;
+			position: absolute;
+			top: 9200px;
+			left: 800px;
+		}
+
+		.benefits-text2 {
+			color: #FFF7EF;
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			line-height: normal;
+			position: absolute;
+			top: 9700px;
+			left: 100px;
+		}
+
+		.didyouknow2 {
+			color: #A11B0A;
+			font-family: Aboreto;
+			font-size: 86px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 10100px;
+			left: 100px;
+		}
+
+		.didyouknow-text2 {
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 10300px;
+			left: 100px;
+			padding: 20px;
+		}
+		.didyouknow-text3 {
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			position: absolute;
+			top: 10500px;
+			left: 100px;
+			padding: 20px;
+		}
+
+		.golden {
+			position: absolute;
+			width: 600px;
+			top: 10500px;
+			right: 100px;
+			z-index: 2;
+		}
+
+		.goldenbuds {
 			position: absolute;
 			width: 500px;
-			height: auto;
-			left: 1000px;
-			top: 3000px;
+			top: 10733px;
+			right: 400px;
+			transform: scaleX(-1) rotate(34deg);
+			z-index: 3;
+		}
 
+		.goldenbuds2 {
+			position: absolute;
+			width: 700px;
+			top: 10200px;
+			margin: 0;
+			left: 1000px;
+			transform: rotate(34deg);
+			z-index: 1;
+		}
+
+		.final {
+			display: flex;
+			padding-block: 50px;          
+		    justify-content: center; 
+		    align-items: center;                      
+		    text-align: center;
+		    margin: 0;
+		    height: 100vh;
+		    margin-top: 800px;
+		}
+
+		.final-text {
+			position: relative;
+			color: #A11B0A;
+			text-align: center;
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		.last {
+			display: flex;         
+		    justify-content: center; 
+		    align-items: center;                      
+		    text-align: center;
+		    margin: 0;
+		    height: 100vh;
+		    margin-top: 600px;
+		}
+
+		.last-img {
+			position: absolute;
+			width: 1000px;
+			align-self: flex-end;
+		}
+		.last-img2 {
+			width: 100vw;
+			position: absolute;
+			align-self: flex-end;
+			top: 13170px;
+		}
+
+		.last-text {
+			color: #FFF7EF;
+			font-family: "Times New Roman";
+			font-size: 32px;
+			font-style: normal;
+			line-height: normal;
+			position: absolute;
+			align-self: flex-end;
+			top: 13520px ;
 		}
 
 	</style>
@@ -207,9 +622,9 @@
 	<header class="header">
     		Know Your Spice
 	    <nav>
-	        <a href="#">ORIGIN</a>
-	        <a href="#">USAGE</a>
-	        <a href="#">BENEFITS</a>
+	        <a href="#origin">ORIGIN</a>
+	        <a href="#usage">USAGE</a>
+	        <a href="#benefits">BENEFITS</a>
 	    </nav>
 	</header>
 
@@ -243,21 +658,121 @@
 		</div>
 	</section>
 
-	<section>
+	<section id="origin">
 		<div class="origin">
 			<h2 class="beaurivage-origin"> Origin </h2>
-			<img src="crocus2.png">
-			<p class="origin-text">
-				Saffron comes from the stigma of a small purple crocus flower, known as <em><strong>Crocus sativus.</strong></em>
-				It is harvested from the crocus flower, which blooms for only a few weeks each year.
+				<img src="crocus2.png">
+					<p class="origin-text">
+						Saffron comes from the stigma of a small purple crocus flower, known as <em><strong>Crocus sativus.</strong></em>
+						It is harvested from the crocus flower, which blooms for only a few weeks each year.
+					</p>
+					<p class="origin-text2">
+					The crocus originated in ancient Persia (modern-day Iran) and later spread across Asia and Europe through trade and cultivation.
+					</p>
+			<h2 class="didyouknow">DID YOU KNOW?</h2>
+				<p class="didyouknow-text">
+					Each flower produces just three tiny red threads,<br> which are carefully handpicked and dried. <br> It takes around <em><strong>150,000 flowers</strong></em> to produce<br> just one kilogram of saffron, making it <em><strong>one</strong></em> of <br> the most valuable substances on earth.
+				</p>		
+
+		</div>
+			<img src="buds.png" class="origin-buds">
+			<img src="buds.png" class="origin-buds2">
+			<img src="buds.png" class="origin-buds3">
+	</section>
+
+	<section>	
+	  <div class="scattered-container">
+	    <img src="buds.png" class="scattered-img">
+	    <img src="buds.png" class="scattered-img2">
+	    <img src="buds.png" class="scattered-img">
+	    <img src="buds.png" class="scattered-img2">
+	    <img src="buds.png" class="scattered-img">
+	    <img src="buds.png" class="scattered-img2">
+	    <img src="buds.png" class="scattered-img">
+	  </div>
+
+	</section>
+
+	<section id="usage">
+		<div class="usage">
+			<h2 class="usage-title">
+				<span class="usage-journey">Journey</span> <br>
+				<span class="usage-across">Across</span>
+				<span class="usage-con">Continents</span>
+			</h2>
+			<img src="worldmap2.png" class="usage-img1">
+			<img src="worldmap1.png" class="usage-img2">
+			<p class="usage-text">
+				For over 3,000 years, saffron has traveled along <br> historic trade routes, linking civilizations from <br>
+				<em><strong>Persia and India</strong></em> to <em><strong>Greece, Spain, and beyond.</strong></em> <br> It was prized not only as a spice but also as <br> a <em><strong>medicine, dye, and perfume.</strong></em>
 			</p>
-			<p class="origin-text2">
-				The crocus originated in ancient Persia (modern-day Iran) and later spread across Asia and Europe through trade and cultivation.
+			<p class="persia">
+				In <em><strong>Persia,</strong></em> saffron symbolized joy and was <br> used in perfumes and celebrations.
+			</p>
+			<img src="paella.png" class="paella">
+			<p class="spain">
+				In <em><strong>Spain,</strong></em> it gave the golden color and aroma<br> to paella, one of the country’s most famous foods.
+			</p>
+			<img src="petal.svg" class="petal">
+			<p class="india">
+				In <em><strong>India</strong></em>, it became a sacred color of purity and <br> appears in religious rituals and traditional dishes.
 			</p>
 		</div>
+	</section>
 
-		<img src="buds.png" class="origin-buds">
+	<section>
+		<div class="prebenefits">
+			<p class="times2">follow</p>
+		</div>
 		
 	</section>
+
+	<section id="benefits">
+   	 <div class="benefits">
+       <h2 class="benefits-title">Benefits</h2>
+         <img src="saffronjar.svg" class="benefits-img1">
+           
+     	     <p class="benefits-text1"> Beyond its beauty and flavor, saffron <br> offers many natural benefits. <br> It has been used in traditional medicine for <br> centuries and continues to be studied for <br> its health-promoting properties.</p>
+          
+            
+    		<p class="benefits-text2">
+    			Taking saffron by mouth might improve some <br> symptoms of <em><strong>Alzheimer disease</strong></em> by a small <br>amount and improve symptoms of <em><strong>depression.</strong></em>
+    		</p>
+     </div>
+  </section>
+
+   <section>
+	  <div>
+	      <h2 class="didyouknow2">DID YOU KNOW?</h2>
+	      <p class="didyouknow-text2">
+	        When saffron is steeped in water, it <br> releases a deep golden hue.<br> This color has long symbolized <em><strong>warmth,<br> light, and life.</strong></em>
+	      </p>
+	      <p class="didyouknow-text3">
+	        The pigment, called <em><strong>crocetin,</strong></em> was once used to <br> dye fabrics and manuscripts.<br> Its strong aroma and taste — <em><strong>slightly earthy,<br> floral, and sweet</strong></em> — make it a key ingredient in <br> both cuisine and culture.
+	      </p>  
+	      <img src="golden1.svg" class="golden">
+	      <img src="buds.png" class="goldenbuds">
+	      <img src="buds.png" class="goldenbuds2">
+	  </div>
+</section>
+
+<section>
+	<div class="final">
+	<p class="final-text">
+		From a single flower comes a thread that has colored the world for centuries. <br> Saffron continues to link past and present — through food, culture, and tradition. <br> It is truly the red thread of the world.
+	</p>
+	</div>
+</section>
+
+<section>
+  <div class="last">
+    <img src="crocusfinal.png" class="last-img">
+    <img src="footer.svg" class="last-img2">
+      <p class="last-text">
+        The Red Thread of The World. © 2025 Sarah. All rights reserved.
+      </p>
+  </div>
+</section>
+
 </body>
 </html>
